@@ -15,3 +15,12 @@ pip install -r requirements.txt
 pytest
 docker build -t cicd-demo .
 ```
+
+## Активация пайплайна
+Файл воркфлоу лежит в `ci/github-actions-ci.yml` (чтобы пуш не требовал scope `workflow` у токена).
+Чтобы включить его как реальный GitHub Actions workflow:
+```bash
+mkdir -p .github/workflows
+cp ci/github-actions-ci.yml .github/workflows/ci.yml
+git add .github/workflows/ci.yml && git commit -m "Enable CI" && git push
+```
