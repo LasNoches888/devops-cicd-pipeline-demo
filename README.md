@@ -24,3 +24,9 @@ mkdir -p .github/workflows
 cp ci/github-actions-ci.yml .github/workflows/ci.yml
 git add .github/workflows/ci.yml && git commit -m "Enable CI" && git push
 ```
+
+## Дополнительно
+- `Makefile` — команды `make lint`, `make test`, `make check`, `make docker-build`, `make smoke` (те же проверки, что в CI).
+- `scripts/smoke_test.sh` — дымовой тест собранного образа.
+- `docs/pipeline.md` — устройство пайплайна, публикация образа, защита ветки `main`.
+- `.github/dependabot.yml` — еженедельные обновления зависимостей pip и базового образа.

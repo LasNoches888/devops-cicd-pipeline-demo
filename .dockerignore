@@ -1,0 +1,13 @@
+.git
+.github
+ci
+docs
+tests
+scripts
+__pycache__
+*.py[cod]
+.pytest_cache
+.venv
+.env
+Makefile
+README.md
